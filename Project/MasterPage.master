@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #Header
+        {
+            height: 170px;
+            margin-left: 200px;
+        }
+    </style>
+    
+</head>
+<body>
+     <form id="form1" runat="server">
+      <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="True">
+  </asp:ScriptManager>
+<div id="PageWrapper">
+<div id="Header">
+    <asp:Image ID="Image1" runat="server" Height="169px" 
+        ImageUrl="~/Header.jpg" Width="846px" />
+    </div>
+<div id="MenuWrapper" > 
+    
+   <div  style="margin-left: 200px">
+       <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" 
+        BackColor="Red" Font-Bold="True" Font-Underline="True" ForeColor="#CC0000" 
+        Orientation="Horizontal" ScrollDownImageUrl="~/bg2.jpg" 
+        StaticPopOutImageUrl="~/bg2.jpg">
+           <DynamicHoverStyle BackColor="#66FFFF" ForeColor="Black" />
+           <StaticHoverStyle BackColor="Black" BorderColor="White" Font-Underline="True" 
+            ForeColor="White" />
+           <StaticMenuItemStyle BackColor="#3399FF" BorderColor="White" 
+            BorderStyle="Outset" BorderWidth="2px" ForeColor="#66CCFF" 
+            HorizontalPadding="20px" ItemSpacing="50px" VerticalPadding="10px" 
+               Width="100px" />
+           <StaticMenuStyle BackColor="#66CCFF" BorderColor="#0066FF" BorderWidth="2px" 
+            HorizontalPadding="5px" VerticalPadding="5px" />
+           <StaticSelectedStyle BackColor="#33CCFF" BorderColor="#FF0066" 
+            ForeColor="White" />
+       </asp:Menu>
+       <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" 
+        ShowStartingNode="False" />
+    
+    </div>
+    </div>
+<div id="MainContent">
+<asp:ContentPlaceHolder ID="cpMainContent" runat="server">
+</asp:ContentPlaceHolder>
+</div>
+<div id="Footer" align="center" >All Rights Reserved</div>
+</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,142 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ASP_MasterPage.master.cs" Inherits="ASP_MasterPage" %>
+<%@ Register src="~/Controls/improveControl.ascx" tagname="Improveform" tagprefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style2
+        {
+            width: 196px;
+        }
+        #Footer
+        {
+            width: 1262px;
+        }
+        .style3
+        {
+            width: 269px;
+            height: 187px;
+        }
+        .style4
+        {
+            width: 269px;
+            height: 211px;
+        }
+        .style5
+        {
+            height: 211px;
+        }
+        .style6
+        {
+            height: 187px;
+        }
+        #Improve
+        {
+            margin-left: 200px;
+        }
+    </style>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+     <form id="form1" runat="server">
+     <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="True">
+  </asp:ScriptManager>
+<div id="PageWrapper">
+<div id="Header" style="margin-left: 200px">
+    <asp:Image ID="Image1" runat="server" Height="169px" 
+        ImageUrl="~/Header.jpg" Width="846px" />
+    </div>
+<div id="MenuWrapper" > 
+    
+   <div  style="margin-left: 200px">
+       <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" 
+        BackColor="Red" Font-Bold="True" Font-Underline="True" ForeColor="#CC0000" 
+        Orientation="Horizontal" ScrollDownImageUrl="~/bg2.jpg" 
+        StaticPopOutImageUrl="~/bg2.jpg">
+           <DynamicHoverStyle BackColor="#66FFFF" ForeColor="Black" />
+           <StaticHoverStyle BackColor="Black" BorderColor="White" Font-Underline="True" 
+            ForeColor="White" />
+           <StaticMenuItemStyle BackColor="#3399FF" BorderColor="White" 
+            BorderStyle="Outset" BorderWidth="2px" ForeColor="#66CCFF" 
+            HorizontalPadding="20px" ItemSpacing="50px" VerticalPadding="10px" 
+               Width="100px" />
+           <StaticMenuStyle BackColor="#66CCFF" BorderColor="#0066FF" BorderWidth="2px" 
+            HorizontalPadding="5px" VerticalPadding="5px" />
+           <StaticSelectedStyle BackColor="#33CCFF" BorderColor="#FF0066" 
+            ForeColor="White" />
+       </asp:Menu>
+       <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" 
+        ShowStartingNode="False" />
+    
+    </div>
+    </div>
+    <div id="working">
+    
+        <table style="width:100%; height: 360px;">
+            <tr>
+                <td style="margin-left: 560px" class="style4">
+                    <div style="border: thin outset #000000; height: 209px;">
+                    <asp:Menu ID="Menu2" runat="server" ForeColor="Black">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/ASP NET/introduction.aspx" Text="Introduction" 
+                                Value="Introduction"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ASP NET/Tags.aspx" Text="Tags" Value="Tags">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ASP NET/Basic Syntax.aspx" Text="Basic Controls" 
+                                Value="Basic Syntax"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ASP NET/First Page.aspx" Text="First Page" 
+                                Value="First Page"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ASP NET/Built Master Page.aspx" 
+                                Text="Built Master page" Value="Built Master page"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ASP NET/Validator.aspx" Text="Validator" 
+                                Value="Validator"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ASP NET/Ajax.aspx" Text="Ajax" Value="Ajax">
+                            </asp:MenuItem>
+                        </Items>
+                        <StaticMenuItemStyle Height="30px" HorizontalPadding="30px" />
+                    </asp:Menu>
+                    </div>
+                    </td>
+                <td class="style5">
+                    <div style="border: thin outset #000000; height: 209px;">
+                     <asp:Image ID="Image2" runat="server" Height="209px" ImageUrl="~/Images/asp.jpg" 
+                            Width="1065px" />
+                     </div>
+                    </td>
+                
+            <tr>
+                <td class="style3">
+                    
+                    </td>
+                <td class="style6">
+                    <div id="MainContent">
+<asp:ContentPlaceHolder ID="cpMainContent" runat="server">
+    <p>
+        PUBLIC ASP KA AREA</p>
+    
+</asp:ContentPlaceHolder>
+</div>
+                    </td>
+                
+           
+        </table>
+    
+    </div>
+    <div id="compiler">
+     <p style="margin-left: 200px">
+   Asp.net Online Compiler <a href="http://www.w3schools.com/aspnet/showaspx.asp?filename=demo_pageload">Try it </a>
+       </p>
+    </div>
+<div id="Improve"> 
+ &nbsp;&nbsp;&nbsp; 
+ <uc1:Improveform ID="Improveform1" runat="server" />
+</div>
+<div id="Footer" align="center" >All Rights Reserved</div>
+</div>
+</form>
+</body>
+</html>

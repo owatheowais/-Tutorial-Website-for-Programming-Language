@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="CS_MasterPage.master.cs" Inherits="CS_MasterPage" %>
+<%@ Register src="~/Controls/improveControl.ascx" tagname="Improveform" tagprefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style2
+        {
+            width: 192px;
+        }
+        #Improve
+        {
+            margin-left: 160px;
+        }
+    </style>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+     <form id="form1" runat="server">
+     <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="True">
+  </asp:ScriptManager>
+<div id="PageWrapper">
+<div id="Header" style="margin-left: 200px">
+    <asp:Image ID="Image1" runat="server" Height="169px" 
+        ImageUrl="~/Header.jpg" Width="846px" />
+    </div>
+<div id="MenuWrapper" > 
+    
+   <div  style="margin-left: 200px">
+       <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" 
+        BackColor="Red" Font-Bold="True" Font-Underline="True" ForeColor="#CC0000" 
+        Orientation="Horizontal" ScrollDownImageUrl="~/bg2.jpg" 
+        StaticPopOutImageUrl="~/bg2.jpg">
+           <DynamicHoverStyle BackColor="#66FFFF" ForeColor="Black" />
+           <StaticHoverStyle BackColor="Black" BorderColor="White" Font-Underline="True" 
+            ForeColor="White" />
+           <StaticMenuItemStyle BackColor="#3399FF" BorderColor="White" 
+            BorderStyle="Outset" BorderWidth="2px" ForeColor="#66CCFF" 
+            HorizontalPadding="20px" ItemSpacing="50px" VerticalPadding="10px" 
+               Width="100px" />
+           <StaticMenuStyle BackColor="#66CCFF" BorderColor="#0066FF" BorderWidth="2px" 
+            HorizontalPadding="5px" VerticalPadding="5px" />
+           <StaticSelectedStyle BackColor="#33CCFF" BorderColor="#FF0066" 
+            ForeColor="White" />
+       </asp:Menu>
+       <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" 
+        ShowStartingNode="False" />
+    
+    </div>
+    </div>
+   <div id="working">
+   
+       <table style="width:100%;">
+           
+           <tr>
+               <td class="style2">
+                   <div style="border: thin outset #000000;">
+                   
+                
+                    <asp:Menu ID="Menu2" runat="server" ForeColor="Black">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Csharp/Introduction.aspx" Text="Introduction" 
+                                Value="Introduction"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Csharp/Basic Syntax.aspx" Text="Basic Syntax" 
+                                Value="Basic Syntax"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Csharp/Data typet.aspx" Text="Data Type" 
+                                Value="Data Type"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Csharp/Loop.aspx" Text="Loop" Value="Loop">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Csharp/Condition.aspx" Text="Condition" 
+                                Value="Condition"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Csharp/Operator.aspx" Text="Operator" 
+                                Value="Operator"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Csharp/Intr to OOP.aspx" Text="Intro to OOP" 
+                                Value="Intro to OOP"></asp:MenuItem>
+                        </Items>
+                        <StaticMenuItemStyle Height="30px" HorizontalPadding="30px" ItemSpacing="0px" />
+                        <StaticMenuStyle VerticalPadding="0px" />
+                    </asp:Menu>
+                
+                </div>
+                   </td>
+               <td>
+                   <div style="border: thin outset #000000; height: 209px;">
+                     <asp:Image ID="Image2" runat="server" Height="209px" ImageUrl="~/Images/csharp.jpg" 
+                           Width="1100px" />
+                     </div>
+                   </td>
+              
+           </tr>
+           <tr>
+               <td class="style2">
+                   
+                   </td>
+               <td>
+                  <div id="MainContent">
+<asp:ContentPlaceHolder ID="cpMainContent" runat="server">
+    <p style="height: 148px">
+        asdasdas
+    </p>
+</asp:ContentPlaceHolder>
+</div>
+                  </td>
+              
+           </tr>
+       </table>
+   
+   </div>
+   <div id="compiler">
+    <p style="margin-left: 160px">
+   C# Online Compiler <a href="http://www.compileonline.com/compile_csharp_online.php">Try it </a>
+       </p>
+    </div>
+   <div id="Improve"> 
+ <uc1:Improveform ID="Improveform1" runat="server" />
+</div>
+<div id="Footer" align="center" >All Rights Reserved</div>
+
+</form>
+</body>
+</html>

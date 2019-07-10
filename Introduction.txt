@@ -1,0 +1,8 @@
+Copy project file 
+
+paste it visual studio 2010\Websites\
+
+HOW TO OPEN
+
+run vs 2010
+click file menu-->select open-->select websites-->then select project folder

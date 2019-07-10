@@ -1,0 +1,52 @@
+﻿body 
+{
+    color:Blue
+}
+p#course
+{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    color:Black;
+    text-align:center;
+    font-weight:bold;
+    text-transform: uppercase;    
+    }
+p#project
+{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    color:Black;
+    text-align:center;
+    text-decoration: underline;
+    text-transform:capitalize;  
+    }
+    
+    p#team, p#year, p#sec, p#instructor
+    {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    color:Black;
+    text-align:center;
+    font-weight:bold;
+    text-transform: uppercase;   
+    }
+    
+    p#teamdetail, p#yeardetail, p#se, p#instructordetail
+    {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    color:Black;
+    text-align:center;
+    text-decoration: underline;
+    text-transform:capitalize;  
+    }
+    
+    p#uni
+    {
+    font-family: "Times New Roman", Times, serif;    
+    font-size: 20px;
+    text-transform: capitalize;
+    color:Black;
+    text-align:center;
+    font-weight:bold;
+        }
